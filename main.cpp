@@ -5,7 +5,7 @@
 #include <memory>
 #include <vector>
 
-/* Reads a CSV of frame timings on stdin, output statistics about it */
+/* Reads a CSV of frame timings on stdin or from a file and output statistics about it */
 int main(int argc, char **argv)
 {
     // A vector of sinks which will process the timing data.
@@ -17,7 +17,8 @@ int main(int argc, char **argv)
     if (argc >= 2 && strcmp(argv[1], "-") != 0)
     {
         input = fopen(argv[1], "r");
-        if (!input) {
+        if (!input)
+        {
             fprintf(stderr, "Could not open file %s\n", argv[1]);
             exit(1);
         }

@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-FILE(GLOB FRAME_SINKS "FrameSinks/*.hpp" "FrameSinks/*.cpp")
+file(GLOB FRAME_SINKS "FrameSinks/*.hpp" "FrameSinks/*.cpp")
 
 add_executable(FrameTimingSim
                ${FRAME_SINKS}
